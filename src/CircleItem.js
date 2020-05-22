@@ -1,15 +1,19 @@
 import React from 'react';
 
-import img from './dog.jpg'
 class CircleItem extends React.Component {
+
+	onImageDivClick = () => {
+		let circleId = this.props.circle.id;
+		this.props.onCircleClick(circleId);
+	};
 
 	render () {
 
-		let imageClassName = "circleImage";
+		let imageDivClassName = this.props.circle.visibility ? "circleImage" : "circleImage circleImageHidden";
 
 		return (
 			<div className="circleItem">
-				<img className={imageClassName} onClick={this.props.onCircleClick} src={img} alt="game_circle"/>
+				<div className={imageDivClassName} onClick={this.onImageDivClick}/>
 			</div>
 		);
 	}
