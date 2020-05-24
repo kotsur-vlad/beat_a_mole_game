@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/beat_a_mole_game/static/css/main.a0710191.chunk.css",
-    "main.js": "/beat_a_mole_game/static/js/main.6a539eed.chunk.js",
-    "main.js.map": "/beat_a_mole_game/static/js/main.6a539eed.chunk.js.map",
+    "main.js": "/beat_a_mole_game/static/js/main.e8f42e2d.chunk.js",
+    "main.js.map": "/beat_a_mole_game/static/js/main.e8f42e2d.chunk.js.map",
     "runtime-main.js": "/beat_a_mole_game/static/js/runtime-main.99377363.js",
     "runtime-main.js.map": "/beat_a_mole_game/static/js/runtime-main.99377363.js.map",
     "static/js/2.c8a87a22.chunk.js": "/beat_a_mole_game/static/js/2.c8a87a22.chunk.js",
     "static/js/2.c8a87a22.chunk.js.map": "/beat_a_mole_game/static/js/2.c8a87a22.chunk.js.map",
     "index.html": "/beat_a_mole_game/index.html",
-    "precache-manifest.a22ca6a42135e43c41c7635bac53e0dc.js": "/beat_a_mole_game/precache-manifest.a22ca6a42135e43c41c7635bac53e0dc.js",
+    "precache-manifest.aee7fdd571ab35631ab56c94ef1ea4c5.js": "/beat_a_mole_game/precache-manifest.aee7fdd571ab35631ab56c94ef1ea4c5.js",
     "service-worker.js": "/beat_a_mole_game/service-worker.js",
     "static/css/main.a0710191.chunk.css.map": "/beat_a_mole_game/static/css/main.a0710191.chunk.css.map",
     "static/js/2.c8a87a22.chunk.js.LICENSE.txt": "/beat_a_mole_game/static/js/2.c8a87a22.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.99377363.js",
     "static/js/2.c8a87a22.chunk.js",
     "static/css/main.a0710191.chunk.css",
-    "static/js/main.6a539eed.chunk.js"
+    "static/js/main.e8f42e2d.chunk.js"
   ]
 }

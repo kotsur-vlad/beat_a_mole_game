@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/beat_a_mole_game/precache-manifest.a22ca6a42135e43c41c7635bac53e0dc.js"
+  "/beat_a_mole_game/precache-manifest.aee7fdd571ab35631ab56c94ef1ea4c5.js"
 );
 
 self.addEventListener('message', (event) => {
