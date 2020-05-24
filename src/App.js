@@ -11,7 +11,7 @@ class App extends React.Component {
 		setInterval(() => {
 			this.getRandomId();
 			this.getVisibleCircle();
-		}, 1000);
+		}, 750);
 	};
 
 	state = {
