@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import sound from "./dog.mp3";
+import sound from "./smashSound.mp3";
 import CircleItem from "./CircleItem";
 
 class App extends React.Component {
@@ -20,6 +20,7 @@ class App extends React.Component {
 		counter: 0,
 		counterStep: 1,
 		randomId: 0,
+		isMute: false
 	};
 	audio = new Audio(sound)
 
@@ -49,7 +50,7 @@ class App extends React.Component {
 	}
 
 	getVisibleCircle = () => {
-		let newVisibleCircle = this.state.circleItems.map (el => {
+		let newVisibleCircle = this.state.circleItems.map(el => {
 			if (el.id === this.state.randomId) {
 				return {...el, ...{visibility: true}}
 			} else {
@@ -77,8 +78,23 @@ class App extends React.Component {
 			}
 			return el;
 		});
-		this.playSound();
+		if (!this.state.isMute) {
+			this.playSound();
+		}
 	};
+
+	onMuteClick = () => {
+		let isMute = this.state.isMute;
+		if (isMute) {
+			this.setState({
+				isMute: false
+			})
+		} else {
+			this.setState({
+				isMute: true
+			})
+		}
+	}
 
 	onResetClick = () => {
 		this.setState({
@@ -92,13 +108,21 @@ class App extends React.Component {
 
 		return (
 			<div className="App">
-				<div className="circleItemsWrapper">
-					{circles}
+				<div className="gameTitle">
+					Beat a Mole!
 				</div>
-				<span className="counter">
-					{this.state.counter}
-				</span>
-				<button className="resetButton" onClick={this.onResetClick}>reset</button>
+				<div className="uiWrapper">
+					<div className="circleItemsWrapper">
+						{circles}
+					</div>
+					<div className="bottomCircles">
+						<button className="resetButton" onClick={this.onMuteClick}>mute</button>
+						<div className="counter">
+							{this.state.counter}
+						</div>
+						<button className="resetButton" onClick={this.onResetClick}>reset</button>
+					</div>
+				</div>
 			</div>
 		);
 	}
