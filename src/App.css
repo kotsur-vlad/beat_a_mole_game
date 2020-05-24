@@ -16,24 +16,22 @@
 	text-align: center;
 	color: #ffff00;
 	line-height: 0.8;
-	text-shadow:
-			-0   -1px 2px #000000,
-			0   -1px 2px #000000,
-			-0    1px 2px #000000,
-			0    1px 2px #000000,
-			-1px -0   2px #000000,
-			1px -0   2px #000000,
-			-1px  0   2px #000000,
-			1px  0   2px #000000,
-			-1px -1px 2px #000000,
-			1px -1px 2px #000000,
-			-1px  1px 2px #000000,
-			1px  1px 2px #000000,
-			-1px -1px 2px #000000,
-			1px -1px 2px #000000,
-			-1px  1px 2px #000000,
-			1px  1px 2px #000000;
-
+	text-shadow: -0 -1px 2px #000000,
+	0 -1px 2px #000000,
+	-0 1px 2px #000000,
+	0 1px 2px #000000,
+	-1px -0 2px #000000,
+	1px -0 2px #000000,
+	-1px 0 2px #000000,
+	1px 0 2px #000000,
+	-1px -1px 2px #000000,
+	1px -1px 2px #000000,
+	-1px 1px 2px #000000,
+	1px 1px 2px #000000,
+	-1px -1px 2px #000000,
+	1px -1px 2px #000000,
+	-1px 1px 2px #000000,
+	1px 1px 2px #000000;
 	padding-top: 10vh;
 	padding-bottom: 7vh;
 	min-height: 100px;
@@ -50,11 +48,9 @@
 	width: 320px;
 	min-width: 320px;
 	min-height: 425px;
-
-		background-color: red;
-		border-radius: 10px;
-		border: 1px solid gray;
-
+	background: rgba(185, 200, 167, 0.5);
+	border-radius: 10px;
+	border: 1px solid #5B3620;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -75,7 +71,7 @@
 	cursor: url("./hammer.png"), pointer;
 }
 
-/*Block with circle*/
+/*Block with one circle*/
 .circleItem {
 	position: relative;
 	width: 100px;
@@ -84,15 +80,14 @@
 	min-width: 100px;
 	border: 1px solid #5B3620;
 	border-radius: 50%;
-
-		background-color: lightskyblue;
-
-	background-image: url("./hole.png");
+	background: rgba(109, 205, 40, 0.6) url("./hole.png");
 	overflow: hidden;
 }
+
 .circleItem:hover {
-		background-color: #f6f655;
+	background-color: rgba(239, 203, 71, 0.82);
 }
+
 .circleItem:active {
 	top: 10px;
 }
@@ -105,6 +100,7 @@
 	height: 90px;
 	visibility: visible;
 }
+
 /*Block with circle image, when it hidden*/
 .circleImageHidden {
 	visibility: hidden;
@@ -116,11 +112,8 @@
 	width: 320px;
 	min-width: 320px;
 	min-height: 105px;
-
-		background-color: lightpink;
-		border-radius: 10px;
-		border: 1px solid gray;
-
+	background: rgba(211, 239, 174, 0.5);
+	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -135,11 +128,9 @@
 	height: 100px;
 	min-width: 100px;
 	min-height: 100px;
-
-		background-color: white;
-		border: 1px solid gray;
-		color: darkblue;
-
+	background-color: #eaea76;
+	border: 1px solid #5B3620;
+	color: black;
 	border-radius: 50%;
 	font-size: 2.5rem;
 	user-select: none;
@@ -147,16 +138,15 @@
 
 /*Button for reset counter*/
 .resetButton {
+	position: relative;
 	border-radius: 50%;
 	width: 90px;
 	min-width: 90px;
 	height: 90px;
 	min-height: 90px;
-
-		font-size: ;
-		background-color: #f5f597;
-
-
+	font-size: 1.6rem;
+	background-color: #f5f597;
+	color: black;
 	transition: 0.2s;
 	text-align: center;
 	border: none;
@@ -164,9 +154,63 @@
 	user-select: none;
 	cursor: pointer;
 }
+
 .resetButton:hover {
-		background-color: #f6f655;
+	border: 1px solid #5B3620;
 }
+
 .resetButton:active {
-		background-color: #efef11;
+	top: 3px;
+}
+
+/*Buttons for mute sounds*/
+.muteButton {
+	position: relative;
+	border-radius: 50%;
+	width: 90px;
+	min-width: 90px;
+	height: 90px;
+	min-height: 90px;
+	opacity: 0.5;
+	background: #f5f597 url("./mute.png") no-repeat center center;
+	background-size: 40%;
+	transition: 0.2s;
+	text-align: center;
+	border: none;
+	outline: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.muteButton:hover {
+	border: 1px solid #5B3620;
+}
+
+.muteButton:active {
+	top: 3px;
+}
+
+.unMuteButton {
+	position: relative;
+	border-radius: 50%;
+	width: 90px;
+	min-width: 90px;
+	height: 90px;
+	min-height: 90px;
+	background: #f5f597 url("./unMute.png") no-repeat center center;
+	background-size: 40%;
+	transition: 0.2s;
+	text-align: center;
+	border: none;
+	outline: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.unMuteButton:hover {
+	border: 1px solid #5B3620;
+}
+
+.unMuteButton:active {
+	top: 3px;
 }

@@ -46,7 +46,6 @@ class App extends React.Component {
 				randomId: newId
 			});
 		}
-		console.log(this.state.randomId)
 	}
 
 	getVisibleCircle = () => {
@@ -78,7 +77,7 @@ class App extends React.Component {
 			}
 			return el;
 		});
-		if (!this.state.isMute) {
+		if ( !this.state.isMute) {
 			this.playSound();
 		}
 	};
@@ -104,7 +103,8 @@ class App extends React.Component {
 
 	render () {
 
-		let circles = this.state.circleItems.map(el => <CircleItem circle={el} onCircleClick={this.onCircleClick}/>)
+		let circles = this.state.circleItems.map(el => <CircleItem circle={el} onCircleClick={this.onCircleClick}/>);
+		let muteButtonClassName = this.state.isMute ? "muteButton" : "unMuteButton";
 
 		return (
 			<div className="App">
@@ -116,7 +116,7 @@ class App extends React.Component {
 						{circles}
 					</div>
 					<div className="bottomCircles">
-						<button className="resetButton" onClick={this.onMuteClick}>mute</button>
+						<button className={muteButtonClassName} onClick={this.onMuteClick}/>
 						<div className="counter">
 							{this.state.counter}
 						</div>
