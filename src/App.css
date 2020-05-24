@@ -155,10 +155,8 @@
     background-color: #eaea76;
 }
 
-/*Button for reset counter*/
-.resetButton {
-    font-size: 1.6rem;
-
+/*Buttons with identical properties*/
+.muteButton, .unMuteButton, .resetButton {
     position: relative;
 
     width: 90px;
@@ -171,75 +169,35 @@
     transition: 0.2s;
     text-align: center;
 
-    color: black;
     border: none;
     border-radius: 50%;
     outline: none;
-    background-color: #f5f597;
 }
 
-.resetButton:hover {
+.muteButton:hover, .unMuteButton:hover, .resetButton:hover {
     border: 1px solid #5b3620;
 }
 
-.resetButton:active {
+.muteButton:active, .unMuteButton:active, .resetButton:active {
     top: 3px;
 }
 
 /*Buttons for mute sounds*/
 .muteButton {
-    position: relative;
-
-    width: 90px;
-    min-width: 90px;
-    height: 90px;
-    min-height: 90px;
-
-    cursor: pointer;
-    user-select: none;
-    transition: 0.2s;
-    text-align: center;
-
     opacity: 0.5;
-    border: none;
-    border-radius: 50%;
-    outline: none;
     background: #f5f597 url("img/mute.png") no-repeat center center;
     background-size: 40%;
 }
 
-.muteButton:hover {
-    border: 1px solid #5b3620;
-}
-
-.muteButton:active {
-    top: 3px;
-}
-
 .unMuteButton {
-    position: relative;
-
-    width: 90px;
-    min-width: 90px;
-    height: 90px;
-    min-height: 90px;
-
-    cursor: pointer;
-    user-select: none;
-    transition: 0.2s;
-    text-align: center;
-
-    border: none;
-    border-radius: 50%;
-    outline: none;
     background: #f5f597 url("img/unMute.png") no-repeat center center;
     background-size: 40%;
 }
 
-.unMuteButton:hover {
-    border: 1px solid #5b3620;
-}
+/*Button for reset counter*/
+.resetButton {
+    font-size: 1.6rem;
 
-.unMuteButton:active {
-    top: 3px;
+    color: black;
+    background-color: #f5f597;
 }
