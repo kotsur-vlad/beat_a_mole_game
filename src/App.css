@@ -1,216 +1,245 @@
 /*Main block of App*/
 .App {
-	background-color: #9F6844;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	min-width: 320px;
-	min-height: 100vh;
-	background-image: url("./background.jpg");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+
+    background-color: #9f6844;
+    background-image: url("img/background.jpg");
 }
 
 /*Block with game's title*/
 .gameTitle {
-	text-align: center;
-	color: #ffff00;
-	line-height: 0.8;
-	text-shadow: -0 -1px 2px #000000,
-	0 -1px 2px #000000,
-	-0 1px 2px #000000,
-	0 1px 2px #000000,
-	-1px -0 2px #000000,
-	1px -0 2px #000000,
-	-1px 0 2px #000000,
-	1px 0 2px #000000,
-	-1px -1px 2px #000000,
-	1px -1px 2px #000000,
-	-1px 1px 2px #000000,
-	1px 1px 2px #000000,
-	-1px -1px 2px #000000,
-	1px -1px 2px #000000,
-	-1px 1px 2px #000000,
-	1px 1px 2px #000000;
-	padding-top: 10vh;
-	padding-bottom: 7vh;
-	min-height: 100px;
-	height: 10vh;
-	width: 100%;
-	min-width: 320px;
-	font-size: 4rem;
-	user-select: none;
+    font-size: 4rem;
+    line-height: 0.8;
+
+    width: 100%;
+    min-width: 320px;
+    height: 10vh;
+    min-height: 100px;
+    padding-top: 10vh;
+    padding-bottom: 7vh;
+
+    user-select: none;
+    text-align: center;
+
+    color: #ffff00;
+    text-shadow: -0 -1px 2px #000000,
+    0 -1px 2px #000000,
+    -0 1px 2px #000000,
+    0 1px 2px #000000,
+    -1px -0 2px #000000,
+    1px -0 2px #000000,
+    -1px 0 2px #000000,
+    1px 0 2px #000000,
+    -1px -1px 2px #000000,
+    1px -1px 2px #000000,
+    -1px 1px 2px #000000,
+    1px 1px 2px #000000,
+    -1px -1px 2px #000000,
+    1px -1px 2px #000000,
+    -1px 1px 2px #000000,
+    1px 1px 2px #000000;
 }
 
 /*Wrapper for blocks: circles, counter, buttons*/
 .uiWrapper {
-	height: 425px;
-	width: 320px;
-	min-width: 320px;
-	min-height: 425px;
-	background: rgba(185, 200, 167, 0.5);
-	border-radius: 10px;
-	border: 1px solid #5B3620;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 320px;
+    min-width: 320px;
+    height: 425px;
+    min-height: 425px;
+
+    border: 1px solid #5b3620;
+    border-radius: 10px;
+    background: rgba(185, 200, 167, 0.5);
 }
 
 /*Wrapper for all circles*/
 .circleItemsWrapper {
-	height: 320px;
-	width: 320px;
-	min-width: 320px;
-	min-height: 320px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-content: space-evenly;
-	cursor: url("./hammer.png"), pointer;
+    display: flex;
+    align-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    width: 320px;
+    min-width: 320px;
+    height: 320px;
+    min-height: 320px;
+
+    cursor: url("img/hammer.png"), pointer;
 }
 
 /*Block with one circle*/
 .circleItem {
-	position: relative;
-	width: 100px;
-	height: 100px;
-	min-height: 100px;
-	min-width: 100px;
-	border: 1px solid #5B3620;
-	border-radius: 50%;
-	background: rgba(109, 205, 40, 0.6) url("./hole.png");
-	overflow: hidden;
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    min-height: 100px;
+
+    border: 1px solid #5b3620;
+    border-radius: 50%;
+    background: rgba(109, 205, 40, 0.6) url("img/hole.png");
 }
 
 .circleItem:hover {
-	background-color: rgba(239, 203, 71, 0.82);
+    background-color: rgba(239, 203, 71, 0.82);
 }
 
 .circleItem:active {
-	top: 10px;
+    top: 10px;
 }
-
 
 /*Block with circle image*/
 .circleImage {
-	background-image: url("./holeWithMole.png");
-	width: 100px;
-	height: 90px;
-	visibility: visible;
+    visibility: visible;
+
+    width: 100px;
+    height: 90px;
+
+    background-image: url("img/holeWithMole.png");
 }
 
 /*Block with circle image, when it hidden*/
 .circleImageHidden {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 /*Block with buttons and counter*/
 .bottomCircles {
-	height: 105px;
-	width: 320px;
-	min-width: 320px;
-	min-height: 105px;
-	background: rgba(211, 239, 174, 0.5);
-	border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 320px;
+    min-width: 320px;
+    height: 105px;
+    min-height: 105px;
+
+    border-radius: 10px;
+    background: rgba(211, 239, 174, 0.5);
 }
 
 /*Block with counter*/
 .counter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100px;
-	height: 100px;
-	min-width: 100px;
-	min-height: 100px;
-	background-color: #eaea76;
-	border: 1px solid #5B3620;
-	color: black;
-	border-radius: 50%;
-	font-size: 2.5rem;
-	user-select: none;
+    font-size: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    min-height: 100px;
+
+    user-select: none;
+
+    color: black;
+    border: 1px solid #5b3620;
+    border-radius: 50%;
+    background-color: #eaea76;
 }
 
 /*Button for reset counter*/
 .resetButton {
-	position: relative;
-	border-radius: 50%;
-	width: 90px;
-	min-width: 90px;
-	height: 90px;
-	min-height: 90px;
-	font-size: 1.6rem;
-	background-color: #f5f597;
-	color: black;
-	transition: 0.2s;
-	text-align: center;
-	border: none;
-	outline: none;
-	user-select: none;
-	cursor: pointer;
+    font-size: 1.6rem;
+
+    position: relative;
+
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    min-height: 90px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    text-align: center;
+
+    color: black;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: #f5f597;
 }
 
 .resetButton:hover {
-	border: 1px solid #5B3620;
+    border: 1px solid #5b3620;
 }
 
 .resetButton:active {
-	top: 3px;
+    top: 3px;
 }
 
 /*Buttons for mute sounds*/
 .muteButton {
-	position: relative;
-	border-radius: 50%;
-	width: 90px;
-	min-width: 90px;
-	height: 90px;
-	min-height: 90px;
-	opacity: 0.5;
-	background: #f5f597 url("./mute.png") no-repeat center center;
-	background-size: 40%;
-	transition: 0.2s;
-	text-align: center;
-	border: none;
-	outline: none;
-	user-select: none;
-	cursor: pointer;
+    position: relative;
+
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    min-height: 90px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    text-align: center;
+
+    opacity: 0.5;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background: #f5f597 url("img/mute.png") no-repeat center center;
+    background-size: 40%;
 }
 
 .muteButton:hover {
-	border: 1px solid #5B3620;
+    border: 1px solid #5b3620;
 }
 
 .muteButton:active {
-	top: 3px;
+    top: 3px;
 }
 
 .unMuteButton {
-	position: relative;
-	border-radius: 50%;
-	width: 90px;
-	min-width: 90px;
-	height: 90px;
-	min-height: 90px;
-	background: #f5f597 url("./unMute.png") no-repeat center center;
-	background-size: 40%;
-	transition: 0.2s;
-	text-align: center;
-	border: none;
-	outline: none;
-	user-select: none;
-	cursor: pointer;
+    position: relative;
+
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    min-height: 90px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    text-align: center;
+
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background: #f5f597 url("img/unMute.png") no-repeat center center;
+    background-size: 40%;
 }
 
 .unMuteButton:hover {
-	border: 1px solid #5B3620;
+    border: 1px solid #5b3620;
 }
 
 .unMuteButton:active {
-	top: 3px;
+    top: 3px;
 }

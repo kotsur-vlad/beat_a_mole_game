@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import sound from "./smashSound.mp3";
+import sound from "./sound/smashSound.mp3";
 import CircleItem from "./CircleItem";
 
 class App extends React.Component {
